@@ -792,13 +792,7 @@ function renderProduct() {
     image.src = process.image || placeholder;
 
     /* VP.Start watermark */
-    const watermark = document.createElement("img");
-    watermark.className = "watermark";
-    watermark.src = "VP.jpg";
-    watermark.alt = "VP.Start logo";
-    watermark.onerror = () => watermark.remove();
-
-    imageWrap.append(image, watermark);
+    imageWrap.appendChild(image);
 
     /* Process instructions */
     const instructions = document.createElement("div");
